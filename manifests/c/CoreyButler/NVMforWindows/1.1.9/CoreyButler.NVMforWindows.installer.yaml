@@ -1,0 +1,18 @@
+# Created with YamlCreate.ps1 v2.2.1 $debug=NVS0.CRLF.7-3-0.Win32NT
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.2.0.schema.json
+
+PackageIdentifier: CoreyButler.NVMforWindows
+PackageVersion: 1.1.9
+InstallerLocale: en-US
+InstallerType: inno
+UpgradeBehavior: install
+ReleaseDate: 2021-12-11
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.exe
+  InstallerSha256: 4B16E9289A41527F17ECA80C745688C6AF6D10A882294BF94B2ED71C80FA42EF
+- Architecture: x86
+  InstallerUrl: https://github.com/coreybutler/nvm-windows/releases/download/1.1.9/nvm-setup.exe
+  InstallerSha256: 4B16E9289A41527F17ECA80C745688C6AF6D10A882294BF94B2ED71C80FA42EF
+ManifestType: installer
+ManifestVersion: 1.2.0
