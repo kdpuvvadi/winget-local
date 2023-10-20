@@ -163,8 +163,13 @@ if ($Settings) {
   exit
 }
 
+<<<<<<< HEAD
 $ScriptHeader = '# Created with YamlCreate.ps1 v2.2.10'
 $ManifestVersion = '1.5.0'
+=======
+$ScriptHeader = '# Created with YamlCreate.ps1 v2.2.8'
+$ManifestVersion = '1.4.0'
+>>>>>>> 63bce5428a80e8c5c74afbfd1028f4cefca3ac8d
 $PSDefaultParameterValues = @{ '*:Encoding' = 'UTF8' }
 $Utf8NoBomEncoding = New-Object System.Text.UTF8Encoding $False
 $ofs = ', '
@@ -454,7 +459,10 @@ Function Request-InstallerUrl {
         }
       }
       $NewInstallerUrl = [System.Web.HttpUtility]::UrlDecode($NewInstallerUrl.Replace('+','%2B'))
+<<<<<<< HEAD
       $NewInstallerUrl = $NewInstallerUrl.Replace(' ','%20')
+=======
+>>>>>>> 63bce5428a80e8c5c74afbfd1028f4cefca3ac8d
       if ($script:_returnValue.StatusCode -ne 409) {
         if (Test-String $NewInstallerUrl -MaxLength $Patterns.InstallerUrlMaxLength -MatchPattern $Patterns.InstallerUrl -NotNull) {
           $script:_returnValue = [ReturnValue]::Success()
@@ -2784,7 +2792,10 @@ Switch ($script:Option) {
     $_NewInstallers = @();
     foreach ($_Installer in $script:OldInstallerManifest.Installers) {
       $_Installer['InstallerUrl'] = [System.Web.HttpUtility]::UrlDecode($_Installer.InstallerUrl.Replace('+', '%2B'))
+<<<<<<< HEAD
       $_Installer['InstallerUrl'] = $_Installer.InstallerUrl.Replace(' ', '%20')
+=======
+>>>>>>> 63bce5428a80e8c5c74afbfd1028f4cefca3ac8d
       try {
         $script:dest = Get-InstallerFile -URI $_Installer.InstallerUrl -PackageIdentifier $PackageIdentifier -PackageVersion $PackageVersion
       } catch {

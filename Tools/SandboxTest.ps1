@@ -10,9 +10,13 @@ Param(
   [switch] $SkipManifestValidation,
   [switch] $Prerelease,
   [switch] $EnableExperimentalFeatures,
+<<<<<<< HEAD
   [string] $WinGetVersion,
   [Parameter(HelpMessage = 'Additional options for WinGet')]
   [string] $WinGetOptions
+=======
+  [string] $WinGetVersion
+>>>>>>> 63bce5428a80e8c5c74afbfd1028f4cefca3ac8d
 )
 
 $ErrorActionPreference = 'Stop'

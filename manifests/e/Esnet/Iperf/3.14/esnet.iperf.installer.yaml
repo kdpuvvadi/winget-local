@@ -1,0 +1,21 @@
+# Created with YamlCreate.ps1 v2.2.8 $debug=NVS0.CRLF.7-3-5.Win32NT
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.4.0.schema.json
+
+PackageIdentifier: esnet.iperf
+PackageVersion: "3.14"
+InstallerLocale: en-US
+InstallerType: zip
+Protocols:
+- tcp
+- udp
+ReleaseDate: 2023-07-08
+Installers:
+- Architecture: neutral
+  NestedInstallerType: portable
+  NestedInstallerFiles:
+  - RelativeFilePath: iperf3-windows-3.14\iperf3.exe
+    PortableCommandAlias: iperf
+  InstallerUrl: https://github.com/Puvvadis/iperf/releases/download/3.14/iperf3-windows-3.14.zip
+  InstallerSha256: 89B6ABB339FB5EC0235FC852ED14A6E773902BC2CE59D58A8DE4B25A21A89190
+ManifestType: installer
+ManifestVersion: 1.4.0
